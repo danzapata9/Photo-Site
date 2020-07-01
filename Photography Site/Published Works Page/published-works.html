@@ -1,0 +1,106 @@
+!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../Home Page/index.css">
+  <script src="../Home Page/index.js"></script>
+</head>
+
+<body>
+  <div>
+  <h1>J.Ruiz Photo</h1>
+  <br>
+<div class="navbar">
+  <a href="http://127.0.0.1:5500/Home%20Page/Index.html">Home</a>
+  <a class="active" href="#">Published Works</a>
+  <a href="http://127.0.0.1:5500/Contact%20Form/contact-form.html">Contact</a>
+  
+</div>
+</div>
+  <div>
+  
+
+  <h2>Published Items</h2>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="eiffel-tower (1).jpg" style="width:100%">
+    <div class="text">Eiffel Tower</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="mongolia (1).jpg" style="width:100%">
+    <div class="text">Mongolia</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="glacier (1).jpg" style="width:100%">
+    <div class="text">Glacier</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="sunset (1).jpg" style="width:100%">
+    <div class="text">Sunset</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="wave (1).jpg" style="width:100%">
+    <div class="text">Wave Crashing</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="lion (1).jpg" style="width:100%">
+    <div class="text">Lion Cub</div>
+  </div>
+
+
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+ 
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+  </script>
+  <footer>&copy Copyright 2020</footer>
+
+</body>
+
+</html> 
